@@ -3,6 +3,8 @@
  * @copyright Stanislav Kalashnik <darkpark.main@gmail.com>
  */
 
+/* eslint no-path-concat: 0 */
+
 'use strict';
 
 var Component = require('stb-component'),
@@ -12,8 +14,8 @@ var Component = require('stb-component'),
  * Magsdk panel set implementation
  *
  * @param {Object} [config={}] init parameters (all inherited from the parent)
- * @param {array} [config.panels] array of panels to use
- * @param {array} [config.focusIndex=0] focus panel index
+ * @param {Array} [config.panels] array of panels to use
+ * @param {Array} [config.focusIndex=0] focus panel index
  * @constructor
  * @extends Component
  */
@@ -27,7 +29,9 @@ function PanelSet ( config ) {
         if ( typeof config !== 'object' ) { throw new Error(__filename + ': wrong config type'); }
         // init parameters checks
         if ( config.className && typeof config.className !== 'string' ) { throw new Error(__filename + ': wrong or empty config.className'); }
-        if ( config.panels && !Array.isArray(config.panels) || !config.panels.length       ) { throw new Error(__filename + ': wrong config.panels type'); }
+        if ( config.panels && !Array.isArray(config.panels) || !config.panels.length ) {
+            throw new Error(__filename + ': wrong config.panels type');
+        }
     }
 
 
@@ -70,17 +74,6 @@ function PanelSet ( config ) {
         this.add.apply(this, config.panels);
     }
 
-
-    // add special listener
-    for ( i = 0; i < this.panels.length; i++ ) {
-        this.panels[i].addListeners({
-            keydown: keydownHandler
-        });
-        // set panels indexes
-        this.panels[i].index = i;
-    }
-
-
     // panel keydown handler to set focus panel
     function keydownHandler ( e ) {
         switch ( e.code ) {
@@ -95,6 +88,15 @@ function PanelSet ( config ) {
                 }
                 break;
         }
+    }
+    
+    // add special listener
+    for ( i = 0; i < this.panels.length; i++ ) {
+        this.panels[i].addListeners({
+            keydown: keydownHandler
+        });
+        // set panels indexes
+        this.panels[i].index = i;
     }
 
     /*if ( config.focusIndex && config.focusIndex < this.panels.length ) {

@@ -1,7 +1,7 @@
 {
     "name": "mag-component-panel-set",
     "version": "1.0.0",
-    "description": "Base panel-set implementation.",
+    "description": "Base panel set implementation.",
     "author": {
         "name": "Stanislav Kalashnik",
         "email": "darkpark.main@gmail.com"
@@ -28,7 +28,8 @@
         "framework",
         "visual",
         "component",
-        "panel-set"
+        "panel",
+        "set"
     ],
     "license": "MIT"
 }
