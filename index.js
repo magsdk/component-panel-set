@@ -76,7 +76,7 @@ function PanelSet ( config ) {
 
     // panel keydown handler to set focus panel
     function keydownHandler ( e ) {
-        switch ( e.code ) {
+        switch ( e.keyCode ) {
             case rc.codes.left:
                 if ( self.focusIndex > 0 ) {
                     self.panels[self.focusIndex - 1].focus();
@@ -89,7 +89,7 @@ function PanelSet ( config ) {
                 break;
         }
     }
-    
+
     // add special listener
     for ( i = 0; i < this.panels.length; i++ ) {
         this.panels[i].addListeners({
@@ -118,37 +118,37 @@ PanelSet.prototype.constructor = PanelSet;
  * Draw panels shadow after adding to DOM
  */
 PanelSet.prototype.drawShadow = function  () {
-//    var i, height, top;
-//
-//
-//    for ( i = 0; i < this.panels.length; i++ ) {
-//        if ( i > 0 ) {
-//            this.panels[i].$node.classList.add('leftShadow');
-//            height = this.panels[i - 1].$node.offsetHeight;
-//            top = this.panels[i - 1].$node.offsetTop - this.panels[i].$node.offsetTop;
-//            if ( this.panels[i].$node.offsetHeight > height ) {
-//                this.panels[i].$shadow.left.style.height = this.panels[i - 1].$node.offsetHeight + 'px';
-//                this.panels[i].$shadow.left.style.top = top + 'px';
-//            } else {
-//                this.panels[i].$shadow.left.style.height = this.panels[i].$node.offsetHeight + 'px';
-//            }
-//
-//        }
-//
-//        if ( i < this.panels.length - 1 ) {
-//            this.panels[i].$node.classList.add('rightShadow');
-//
-//            height = this.panels[i + 1].$node.offsetHeight;
-//            top = this.panels[i + 1].$node.offsetTop - this.panels[i].$node.offsetTop;
-//
-//            if ( this.panels[i].$node.offsetHeight > height ) {
-//                this.panels[i].$shadow.right.style.height = this.panels[i - 1].$node.offsetHeight + 'px';
-//                this.panels[i].$shadow.right.style.top = top + 'px';
-//            } else {
-//                this.panels[i].$shadow.right.style.height = this.panels[i].$node.offsetHeight + 'px';
-//            }
-//        }
-//    }
+   var i, height, top;
+
+
+   for ( i = 0; i < this.panels.length; i++ ) {
+       if ( i > 0 ) {
+           this.panels[i].$node.classList.add('leftShadow');
+           height = this.panels[i - 1].$node.offsetHeight;
+           top = this.panels[i - 1].$node.offsetTop - this.panels[i].$node.offsetTop;
+           if ( this.panels[i].$node.offsetHeight > height ) {
+               this.panels[i].$shadow.left.style.height = this.panels[i - 1].$node.offsetHeight + 'px';
+               this.panels[i].$shadow.left.style.top = top + 'px';
+           } else {
+               this.panels[i].$shadow.left.style.height = this.panels[i].$node.offsetHeight + 'px';
+           }
+
+       }
+
+       if ( i < this.panels.length - 1 ) {
+           this.panels[i].$node.classList.add('rightShadow');
+
+           height = this.panels[i + 1].$node.offsetHeight;
+           top = this.panels[i + 1].$node.offsetTop - this.panels[i].$node.offsetTop;
+
+           if ( this.panels[i].$node.offsetHeight > height ) {
+               this.panels[i].$shadow.right.style.height = this.panels[i - 1].$node.offsetHeight + 'px';
+               this.panels[i].$shadow.right.style.top = top + 'px';
+           } else {
+               this.panels[i].$shadow.right.style.height = this.panels[i].$node.offsetHeight + 'px';
+           }
+       }
+   }
 };
 
 /**
