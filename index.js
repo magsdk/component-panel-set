@@ -117,7 +117,7 @@ PanelSet.prototype.constructor = PanelSet;
 /**
  * Draw panels shadow after adding to DOM
  */
-PanelSet.prototype.drawShadow = function  () {
+/*PanelSet.prototype.drawShadow = function  () {
    var i, height, top;
 
 
@@ -149,7 +149,7 @@ PanelSet.prototype.drawShadow = function  () {
            }
        }
    }
-};
+};*/
 
 /**
  *
