@@ -8,7 +8,7 @@
 'use strict';
 
 var Component = require('stb-component'),
-    rc        = require('stb-rc');
+    keys      = require('stb-keys');
 
 /**
  * Magsdk panel set implementation
@@ -75,14 +75,14 @@ function PanelSet ( config ) {
     }
 
     // panel keydown handler to set focus panel
-    function keydownHandler ( e ) {
-        switch ( e.keyCode ) {
-            case rc.codes.left:
+    function keydownHandler ( event ) {
+        switch ( event.code ) {
+            case keys.left:
                 if ( self.focusIndex > 0 ) {
                     self.panels[self.focusIndex - 1].focus();
                 }
                 break;
-            case rc.codes.right:
+            case keys.right:
                 if ( self.focusIndex < self.panels.length - 1 ) {
                     self.panels[self.focusIndex + 1].focus();
                 }
