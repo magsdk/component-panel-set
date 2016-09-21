@@ -39,7 +39,7 @@ function PanelSet ( config ) {
     config.focusable = config.focusable || false;
 
     // set default className if classList property empty or undefined
-    config.className = 'panelSet ' + (config.className || '');
+    //config.className = 'panelSet ' + (config.className || '');
 
     // parent constructor call
     Component.call(this, config);
@@ -112,6 +112,9 @@ function PanelSet ( config ) {
 
 PanelSet.prototype = Object.create(Component.prototype);
 PanelSet.prototype.constructor = PanelSet;
+
+// set component name
+PanelSet.prototype.name = 'mag-component-panel-set';
 
 
 /**
