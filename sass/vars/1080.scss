@@ -2,6 +2,9 @@
 // @copyright Stanislav Kalashnik <darkpark.main@gmail.com>
 
 @import "720";
+@import "../../node_modules/mag-component-panel/sass/vars/1080";
+@import "../../node_modules/mag-component-list/sass/vars/1080";
+@import "../../node_modules/stb-component-scrollbar/sass/vars/480";
 
 $panelHeight:     $panelHeight * 1.5;
 $panelMainHeight: $panelMainHeight * 1.5;

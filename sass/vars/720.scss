@@ -1,6 +1,10 @@
 // @license The MIT License (MIT)
 // @copyright Stanislav Kalashnik <darkpark.main@gmail.com>
 
+@import "../../node_modules/mag-component-panel/sass/vars/720";
+@import "../../node_modules/mag-component-list/sass/vars/720";
+@import "../../node_modules/stb-component-scrollbar/sass/vars/480";
+
 $panelHeight:     448px;
 $panelMainHeight: 544px;
 $leftPanelTop:    128px;
