@@ -76,7 +76,8 @@
         background-size: auto 100%;
         display: block;
         height: 320px;
-        top: 20px;
-        -webkit-transform: rotate(180deg); }
+        left: 0;
+        top: 0;
+        -webkit-transform: none; }
     .mag-component-panel-set.focus {
         outline: 1px dashed red; }
