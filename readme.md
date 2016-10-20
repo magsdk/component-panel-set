@@ -1,9 +1,10 @@
 Footer component
 ================
 
-[![Build Status](https://img.shields.io/travis/magsdk/component-panel-set.svg?style=flat-square)](https://travis-ci.org/magsdk/component-panel-set)
-[![NPM version](https://img.shields.io/npm/v/mag-component-panel-set.svg?style=flat-square)](https://www.npmjs.com/package/mag-component-panel-set)
-[![Dependencies Status](https://img.shields.io/david/magsdk/component-panel-set.svg?style=flat-square)](https://david-dm.org/magsdk/component-panel-set)
+[![build status](https://img.shields.io/travis/magsdk/component-panel-set.svg?style=flat-square)](https://travis-ci.org/magsdk/component-panel-set)
+[![npm version](https://img.shields.io/npm/v/mag-component-panel-set.svg?style=flat-square)](https://www.npmjs.com/package/mag-component-panel-set)
+[![dependencies status](https://img.shields.io/david/magsdk/component-panel-set.svg?style=flat-square)](https://david-dm.org/magsdk/component-panel-set)
+[![devDependencies status](https://img.shields.io/david/dev/magsdk/component-panel-set.svg?style=flat-square)](https://david-dm.org/magsdk/component-panel-set?type=dev)
 [![Gitter](https://img.shields.io/badge/gitter-join%20chat-blue.svg?style=flat-square)](https://gitter.im/DarkPark/magsdk)
 
 
