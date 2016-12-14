@@ -26,9 +26,13 @@ function PanelSet ( config ) {
     config = config || {};
 
     if ( DEVELOP ) {
-        if ( typeof config !== 'object' ) { throw new Error(__filename + ': wrong config type'); }
+        if ( typeof config !== 'object' ) {
+            throw new Error(__filename + ': wrong config type');
+        }
         // init parameters checks
-        if ( config.className && typeof config.className !== 'string' ) { throw new Error(__filename + ': wrong or empty config.className'); }
+        if ( 'className' in config && (!config.className || typeof config.className !== 'string') ) {
+            throw new Error(__filename + ': wrong or empty config.className');
+        }
         if ( config.panels && !Array.isArray(config.panels) || !config.panels.length ) {
             throw new Error(__filename + ': wrong config.panels type');
         }
