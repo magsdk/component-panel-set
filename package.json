@@ -1,6 +1,6 @@
 {
     "name": "mag-component-panel-set",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Base panel set implementation.",
     "author": {
         "name": "Stanislav Kalashnik",
