@@ -21,7 +21,7 @@ var Component = require('stb-component'),
  */
 function PanelSet ( config ) {
     var self = this,
-        i;
+        index;
 
     config = config || {};
 
@@ -94,12 +94,12 @@ function PanelSet ( config ) {
     }
 
     // add special listener
-    for ( i = 0; i < this.panels.length; i++ ) {
-        this.panels[i].addListeners({
+    for ( index = 0; index < this.panels.length; index++ ) {
+        this.panels[index].addListeners({
             keydown: keydownHandler
         });
         // set panels indexes
-        this.panels[i].index = i;
+        this.panels[index].index = index;
     }
 
     /*if ( config.focusIndex && config.focusIndex < this.panels.length ) {
