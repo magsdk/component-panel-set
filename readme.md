@@ -1,5 +1,5 @@
-Footer component
-================
+Panel set component
+===================
 
 [![build status](https://img.shields.io/travis/magsdk/component-panel-set.svg?style=flat-square)](https://travis-ci.org/magsdk/component-panel-set)
 [![npm version](https://img.shields.io/npm/v/mag-component-panel-set.svg?style=flat-square)](https://www.npmjs.com/package/mag-component-panel-set)
@@ -8,7 +8,7 @@ Footer component
 [![Gitter](https://img.shields.io/badge/gitter-join%20chat-blue.svg?style=flat-square)](https://gitter.im/DarkPark/magsdk)
 
 
-Footer is a component to build user interface, an instance of [Component](https://github.com/stbsdk/component) module.
+Panel set is a component to build user interface, an instance of [Component](https://github.com/stbsdk/component) module. Use with [mag-component-panel](https://github.com/magsdk/component-panel).
 
 
 ## Installation ##
@@ -23,9 +23,18 @@ npm install mag-component-panel-set
 Add the singleton to the scope:
 
 ```js
-var panel-set = require('mag-component-panel-set');
+var PanelSet = require('mag-component-panel-set');
 ```
 
+Create instance with custom config:
+
+```js
+var panelSet = new PanelSet({
+        visible: false,
+        // list of mag-component-panel panels
+        panels: [leftPanel, rightPanel]
+    });
+```
 
 ## Development mode ##
 
